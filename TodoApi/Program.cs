@@ -42,7 +42,7 @@ app.MapDelete("/todoitems/{id}", async (int id, ToDoDbContext context) =>
     {
         context.TodoItems.Remove(todoItem);
         await context.SaveChangesAsync();
-        return Results.NoContent() ;
+        return Results.NoContent();
     }
    return Results.NotFound();
 });
